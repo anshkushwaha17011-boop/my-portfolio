@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Royal Spice Restaurant</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fffaf5;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #171717;
+      color: white;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+      background: #fff0df;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #666;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 28px;
+      background: #e4572e;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 55px 7%;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    .items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
+
+    .item {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 7px 22px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .item h3 {
+      margin-bottom: 8px;
+      font-size: 21px;
+    }
+
+    .item p {
+      color: #666;
+    }
+
+    .price {
+      margin-top: 12px;
+      font-size: 21px;
+      font-weight: bold;
+      color: #e4572e;
+    }
+
+    .about {
+      text-align: center;
+      background: #f7f7f7;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      color: #666;
+      font-size: 17px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 7px 22px rgba(0,0,0,0.08);
+    }
+
+    .contact-box p {
+      margin: 12px 0;
+      font-size: 17px;
+    }
+
+    footer {
+      background: #171717;
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .title {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">🍕 Royal Spice</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <section class="hero" id="home">
+    <h1>Royal Spice Restaurant 🍽️</h1>
+
+    <p>
+      Delicious food, beautiful ambience aur unforgettable taste.
+      Family aur friends ke saath enjoy karein.
+    </p>
+
+    <a href="#menu" class="btn">View Menu</a>
+  </section>
+
+
+  <section id="menu">
+    <h2 class="title">Our Menu 🍴</h2>
+
+    <div class="items">
+
+      <div class="item">
+        <h3>🍕 Cheese Pizza</h3>
+        <p>Fresh cheese aur delicious toppings ke saath.</p>
+        <div class="price">₹199</div>
+      </div>
+
+      <div class="item">
+        <h3>🍔 Royal Burger</h3>
+        <p>Crispy patty, fresh vegetables aur special sauce.</p>
+        <div class="price">₹149</div>
+      </div>
+
+      <div class="item">
+        <h3>🍜 Veg Noodles</h3>
+        <p>Fresh vegetables aur tasty Chinese flavours.</p>
+        <div class="price">₹129</div>
+      </div>
+
+      <div class="item">
+        <h3>🍛 Paneer Masala</h3>
+        <p>Rich gravy mein soft aur delicious paneer.</p>
+        <div class="price">₹219</div>
+      </div>
+
+      <div class="item">
+        <h3>🍚 Fried Rice</h3>
+        <p>Special spices aur fresh vegetables ke saath.</p>
+        <div class="price">₹139</div>
+      </div>
+
+      <div class="item">
+        <h3>🥤 Cold Drink</h3>
+        <p>Chilled refreshing drink.</p>
+        <div class="price">₹49</div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="about" id="about">
+    <h2 class="title">About Us 👨‍🍳</h2>
+
+    <p>
+      Royal Spice Restaurant mein hum fresh ingredients,
+      delicious recipes aur friendly service ke saath
+      ek memorable dining experience dene ki koshish karte hain.
+    </p>
+  </section>
+
+
+  <section class="contact" id="contact">
+    <h2 class="title">Contact Us 📞</h2>
+
+    <div class="contact-box">
+      <p>📍 Deoria, Uttar Pradesh</p>
+      <p>📞 +91 XXXXX XXXXX</p>
+      <p>✉️ royalspice@example.com</p>
+<a href="tel:+919161527533 class="btn">
+  📞 Call Now
+</a>
+
+<a href="https://wa.me/919161527533 class="btn">
+  💬 WhatsApp
+</a>
+      <a href="tel:+919161527533 class="btn">
+        Call Now
+      </a>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>© 2026 Royal Spice Restaurant. All Rights Reserved.</p>
+  </footer>
+<section id="menu" style="padding:60px 7%; text-align:center;">
+  <h2 style="font-size:36px; margin-bottom:35px;">🍽️ Our Menu</h2>
+
+  <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+
+    < class="card">
+      <h3>🍕 Paneer Pizza</h3>
+      <p>Cheesy pizza loaded with fresh paneer.</p>
+      <div class="price">₹249</div>
+<a href="https://wa.me/9161527533?text=Hello%20Royal%20Spice%2C%20I%20want%20to%20order%20Royal%20Burger%20-%20₹149." class="btn">Order Now</a>
+<a href="#" class="btn">Order Now</a>
+    < class="card">
+      <h3>🍔 Royal Burger</h3>
+      <p>Crispy patty with fresh vegetables and cheese.</p>
+      <div class="price">₹149</div>
+    <a href="https://wa.me/9161527533?text=Hello%20Royal%20Spice%2C%20I%20want%20to%20order%20Royal%20Burger%20-%20₹149." class="btn">Order Now</a>
+      <a href="#" class="btn">Order Now</a>
+    < class="card">
+      <h3>🍛 Paneer Butter Masala</h3>
+      <p>Rich creamy gravy with soft paneer.</p>
+      <div class="price">₹229</div>
+    <a href="#" class="btn">Order Now</a>
+<a href="https://wa.me/9161527533?text=Hello%20Royal%20Spice,%20I%20want%20to%20order%20Paneer%20Pizza."
+class="btn">
+Order Now
+</a>
+    < class="card">
+      <h3>🍜 Hakka Noodles</h3>
+      <p>Fresh vegetables tossed with noodles.</p>
+      <div class="price">₹159</div>
+    <a href="https://wa.me/9161527533?text=Hello%20Royal%20Spice%2C%20I%20want%20to%20order%20Hakka%20Noodles%20-%20₹159." class="btn">Order Now</a>
+<a href="#" class="btn">Order Now</a>
+    < class="card">
+      <h3>🥤 Cold Drink</h3>
+      <p>Chilled refreshing soft drink.</p>
+      <div class="price">₹59</div>
+<a href="https://wa.me/9161527533X?text=Hello%20Royal%20Spice%2C%20I%20want%20to%20order%20Cold%20Drink%20-%20₹59." class="btn">Order Now</a>
+<a href="#" class="btn">Order Now</a>
+    < class="card">
+      <h3>🍨 Ice Cream</h3>
+      <p>Delicious creamy dessert.</p>
+      <div class="price">₹99</div>
+<a href="https://wa.me/9161527533?text=Hello%20Royal%20Spice%2C%20I%20want%20to%20order%20Ice%20Cream%20-%20₹99." class="btn">Order Now</a>
+<a href="#" class="btn">Order Now</a>
+  </div>
+</section>
+</body>
+</html>

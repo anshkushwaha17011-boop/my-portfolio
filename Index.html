@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ansh Web Studio</title>
+
+  <style>
+    /* Premium Effects */
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.btn {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+h1, h2 {
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    
+
+    body {
+      background: #f5f7fb;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background: linear-gradient(135deg, #dbeafe, #f5f3ff);
+    }
+
+    .hero h1 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #4f46e5;
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 650px;
+      margin: auto;
+      color: #4b5563;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 28px;
+      background: #4f46e5;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 65px 7%;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #6b7280;
+    }
+
+    .price {
+      font-size: 28px;
+      font-weight: bold;
+      color: #4f46e5;
+      margin: 15px 0;
+    }
+
+    .about {
+      background: #111827;
+      color: white;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      color: #d1d5db;
+    }
+
+    .contact-box {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .contact-box p {
+      margin: 12px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #030712;
+      color: #9ca3af;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 35px;
+      }
+
+      nav a {
+        margin-left: 7px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Ansh Web Studio 🚀</div>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+
+    <h1>Build Your <span>Dream Website</span> 🚀</h1>
+
+    <p>
+      Main modern, fast aur professional websites banata hoon
+      jo businesses aur creators ko online grow karne mein help karein.
+    </p>
+
+    <a href="#contact" class="btn">Get Your Website</a>
+
+  </section>
+
+
+  <section id="services">
+
+    <h2 class="title">My Services</h2>
+
+    < class="cards">
+
+      <div class="card">
+        <h3>🌐 Business Website</h3>
+        <p>
+          Small businesses ke liye professional aur attractive websites.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🛍️ Landing Page</h3>
+        <p>
+          Products aur services ke liye high-converting landing pages.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📱 Mobile Friendly</h3>
+        <p>
+          Website phone, tablet aur computer sabhi devices par responsive.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>⚡ Fast Website</h3>
+        <p>
+          Clean aur lightweight websites jo quickly load hoti hain.
+        </p>
+      </div>  
+</section>
+
+<section id="pricing">
+  <h2 class="title">Simple Pricing 💰</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Basic</h3>
+      <div class="price">₹999</div>
+      <p>Simple one-page professional website.</p>
+    </div>
+
+    <div class="card">
+      <h3>Professional</h3>
+      <div class="price">₹2,499</div>
+      <p>Professional business website with multiple sections.</p>
+    </div>
+
+    <div class="card">
+      <h3>Premium</h3>
+      <div class="price">₹4,999+</div>
+      <p>Advanced custom website according to your requirements.</p>
+    </div>
+
+  </div>
+</section>
+<section id="portfolio"
+  <h2 class="title">My Projects 💻</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>🍔 Restaurant Website</h3>
+      <p>Modern website for a restaurant with menu and contact details.</p>
+<a href="Restaurant.html" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+      <section id="portfolio">
+
+  <h2 class="title">My Projects 💻</h2>
+
+  <div class="cards">
+
+    <!-- Royal Spice yahan -->
+
+    <!-- Restaurant Website -->
+
+    <!-- Business Website -->
+
+    <!-- Online Store -->
+
+  </div>
+
+      </section>
+      <h3>🏪 Business Website</h3>
+      <p>Professional website for a local business and its services.</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>🛍️ Online Store</h3>
+      <p>Clean product showcase website for an online business.</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+
+  </div>
+
+</section>
+<section id="about" class="about">
+  <h2 class="title">About Ansh Web Studio</h2>
+
+  <p>
+    Welcome to Ansh Web Studio. Main modern, clean aur
+    mobile-friendly websites banata hoon.
+  </p>
+</section>
+
+<section id="contact">
+  <h2 class="title">Let's Work Together 🤝</h2>
+
+  <div class="contact-box">
+    <p>📩 Email: yourmail@example.com</p>
+    <p>📱 WhatsApp: +91 XXXXX XXXXX</p>
+
+    <a href="https://wa.me/919999999999?text=Hello%20Ansh%2C%20I%20want%20a%20website" class="btn">
+  WhatsApp Me
+    </a>
+    </>
+  </div>
+</section>
+
+<footer>
+  © 2026 Ansh Web Studio. All Rights Reserved.
+</footer>
+
+</body>
+</html>
