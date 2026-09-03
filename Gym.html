@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IRONFORGE FITNESS | Premium Gym</title>
+
+<style>
+
+/* ===== BASIC ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#080808;
+    color:white;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* ===== NAVBAR ===== */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 7%;
+    background:rgba(8,8,8,0.95);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:999;
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#ff4b00;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    font-size:14px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ff4b00;
+}
+
+
+/* ===== HERO ===== */
+
+.hero{
+    min-height:100vh;
+    padding:150px 7% 80px;
+    display:flex;
+    align-items:center;
+    background:
+    radial-gradient(circle at 80% 40%,#4a1705 0%,#17100d 20%,#080808 55%);
+}
+
+.hero-content{
+    max-width:750px;
+}
+
+.tag{
+    display:inline-block;
+    border:1px solid #ff4b00;
+    color:#ff6a2c;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:13px;
+    letter-spacing:1px;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-size:clamp(45px,8vw,82px);
+    line-height:1;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#ff4b00;
+}
+
+.hero p{
+    color:#aaa;
+    font-size:17px;
+    max-width:600px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:6px;
+    font-weight:bold;
+    margin-right:10px;
+    margin-bottom:10px;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#ff4b00;
+    color:white;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    color:white;
+    border:1px solid #555;
+}
+
+.btn-outline:hover{
+    border-color:#ff4b00;
+    color:#ff4b00;
+}
+
+
+/* ===== STATS ===== */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background:#111;
+    padding:25px 7%;
+}
+
+.stat{
+    text-align:center;
+}
+.stat h3{
+    color:#ff4b00;
+    font-size:30px;
+}
+
+
+/* ===== STATS ====
+}
+
+.stat p{
+    color:#888;
+    font-size:13px;
+}
+
+
+/* ===== COMMON SECTION ===== */
+
+section{
+    padding:90px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title small{
+    color:#ff4b00;
+    letter-spacing:2px;
+}
+
+.section-title h2{
+    font-size:40px;
+    margin-top:8px;
+}
+
+
+/* ===== ABOUT ===== */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image{
+    min-height:360px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:100px;
+    background:
+    radial-gradient(circle,#44200e,#151515 60%,#0b0b0b);
+    border:1px solid #292929;
+}
+
+.about-text h2{
+    font-size:40px;
+    margin:15px 0;
+}
+
+.about-text p{
+    color:#aaa;
+    margin-bottom:15px;
+}
+
+.check{
+    margin:12px 0;
+}
+
+.check span{
+    color:#ff4b00;
+    margin-right:8px;
+}
+
+
+/* ===== SERVICES ===== */
+
+.services{
+    background:#101010;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:#171717;
+    border:1px solid #292929;
+    padding:30px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#ff4b00;
+}
+
+.icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#999;
+    font-size:14px;
+}
+
+
+/* ===== MEMBERSHIP ===== */
+
+.plans{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.plan{
+    position:relative;
+    text-align:center;
+    background:#141414;
+    border:1px solid #292929;
+    border-radius:14px;
+    padding:35px;
+    transition:0.3s;
+}
+
+.plan:hover{
+    transform:translateY(-7px);
+}
+
+.plan.featured{
+    border:2px solid #ff4b00;
+}
+
+.popular{
+    position:absolute;
+    top:-14px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#ff4b00;
+    padding:5px 16px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.plan h3{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.price{
+    font-size:40px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.price span{
+    font-size:13px;
+    color:#777;
+}
+
+.plan ul{
+    list-style:none;
+    color:#aaa;
+    margin-bottom:25px;
+}
+
+.plan li{
+    padding:8px;
+    border-bottom:1px solid #252525;
+}
+
+
+/* ===== TRAINERS ===== */
+
+.trainer-box{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.trainer{
+    text-align:center;
+    background:#151515;
+    padding:25px;
+    border-radius:12px;
+    border:1px solid #282828;
+}
+
+.trainer-photo{
+    height:190px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:80px;
+    background:linear-gradient(135deg,#38200f,#111);
+    margin-bottom:18px;
+}
+
+.trainer p{
+    color:#888;
+    font-size:14px;
+}
+
+
+/* ===== CTA ===== */
+
+.cta{
+    text-align:center;
+    background:linear-gradient(90deg,#8d2700,#ff4b00,#8d2700);
+}
+
+.cta h2{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.cta p{
+    margin-bottom:25px;
+}
+
+.white-btn{
+    background:white;
+    color:#111;
+}
+
+
+/* ===== CONTACT ===== */
+
+.contact{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-box{
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:12px;
+    padding:30px;
+}
+
+.contact-box h3{
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+.contact-item{
+    color:#aaa;
+    margin:18px 0;
+}
+
+.contact-item strong{
+    color:white;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#050505;
+    border-top:1px solid #222;
+    color:#777;
+}
+
+footer span{
+    color:#ff4b00;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media(max-width:800px){
+
+    nav{
+        padding:16px 5%;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    section{
+        padding:70px 5%;
+    }
+
+    .hero{
+        padding:130px 5% 70px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+        padding:25px 5%;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .plans{
+        grid-template-columns:1fr;
+    }
+
+    .trainer-box{
+        grid-template-columns:1fr;
+    }
+
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .cta h2{
+        font-size:32px;
+    }
+
+    .about-image{
+        min-height:250px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ===== NAVBAR ===== -->
+
+<nav>
+
+    <div class="logo">
+        IRON<span>FORGE</span>
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#services">Services</a>
+        </li>
+
+        <li>
+            <a href="#plans">Plans</a>
+        </li>
+
+        <li>
+            <a href="#trainers">Trainers</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- ===== HERO ===== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="tag">
+            PREMIUM FITNESS EXPERIENCE
+        </div>
+
+        <h1>
+            BUILD YOUR<br>
+            <span>STRONGER</span> SELF.
+        </h1>
+
+        <p>
+            Train smarter. Get stronger. Become the best version
+            of yourself with expert trainers, modern equipment
+            and a motivating fitness environment.
+        </p>
+
+        <a href="#plans" class="btn btn-primary">
+            View Membership
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+            Contact Us
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===== STATS ===== -->
+
+<div class="stats">
+
+    <div class="stat">
+        <h3>5+</h3>
+        <p>Years Experience</p>
+    </div>
+
+    <div class="stat">
+        <h3>500+</h3>
+        <p>Active Members</p>
+    </div>
+
+    <div class="stat">
+        <h3>10+</h3>
+        <p>Expert Trainers</p>
+    </div>
+
+    <div class="stat">
+        <h3>24/7</h3>
+        <p>Fitness Motivation</p>
+    </div>
+
+</div>
+
+
+
+<!-- ===== ABOUT ===== -->
+
+<section id="about">
+
+    <div class="about">
+
+        <div class="about-image">
+            🏋️
+        </div>
+
+        <div class="about-text">
+
+            <small style="color:#ff4b00;letter-spacing:2px;">
+                ABOUT IRONFORGE
+            </small>
+
+            <h2>
+                More Than Just A Gym.
+            </h2>
+
+            <p>
+                At IronForge Fitness, we believe fitness is
+                about building discipline, confidence and
+                a stronger lifestyle.
+            </p>
+
+            <p>
+                Our modern training environment and experienced
+                coaches help you stay focused on your fitness journey.
+            </p>
+
+            <div class="check">
+                <span>✓</span>
+                Modern Equipment
+            </div>
+
+            <div class="check">
+                <span>✓</span>
+                Experienced Trainers
+            </div>
+
+            <div class="check">
+                <span>✓</span>
+                Clean & Safe Environment
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===== SERVICES ===== -->
+
+<section class="services" id="services">
+
+    <div class="section-title">
+
+        <small>WHAT WE OFFER</small>
+
+        <h2>
+            Train With Purpose
+        </h2>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="icon">🏋️</div>
+
+            <h3>
+                Strength Training
+            </h3>
+
+            <p>
+                Build strength with structured workouts
+                and modern gym equipment.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🏃</div>
+
+            <h3>
+                Cardio Training
+            </h3>
+
+            <p>
+                Improve stamina and endurance with
+                effective cardio sessions.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🥊</div>
+
+            <h3>
+                Personal Training
+            </h3>
+
+            <p>
+                Get personalized guidance from
+                experienced fitness trainers.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🔥</div>
+
+            <h3>
+                Fat Loss
+            </h3>
+
+            <p>
+                Follow structured workouts supporting
+                healthy fitness goals.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">💪</div>
+
+            <h3>
+                Muscle Building
+            </h3>
+
+            <p>
+                Progressive training designed to improve
+                strength and fitness.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🧘</div>
+
+            <h3>
+                Mobility Training
+            </h3>
+
+            <p>
+                Improve flexibility, mobility and
+                overall body movement.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ===== PLANS ===== -->
+
+<section id="plans">
+
+    <div class="section-title">
+
+        <small>MEMBERSHIP</small>
+
+        <h2>
+            Choose Your Plan
+        </h2>
+
+    </div>
+
+
+    <div class="plans">
+
+
+        <div class="plan">
+
+            <h3>
+                STARTER
+            </h3>
+
+            <div class="price">
+                ₹999
+                <span>/month</span>
+            </div>
+
+            <ul>
+
+                <li>Gym Access</li>
+                <li>Basic Equipment</li>
+                <li>Locker Facility</li>
+                <li>Fitness Guidance</li>
+
+            </ul>
+
+            <a href="#contact" class="btn btn-outline">
+                Join Now
+            </a>
+
+        </div>
+
+
+
+        <div class="plan featured">
+
+            <div class="popular">
+                MOST POPULAR
+            </div>
+
+            <h3>
+                PRO
+            </h3>
+
+            <div class="price">
+                ₹1,499
+                <span>/month</span>
+            </div>
+
+            <ul>
+
+                <li>Unlimited Gym Access</li>
+                <li>All Equipment</li>
+                <li>Personal Guidance</li>
+                <li>Workout Plan</li>
+
+            </ul>
+
+            <a href="#contact" class="btn btn-primary">
+                Join Now
+            </a>
+
+        </div>
+
+
+
+        <div class="plan">
+
+            <h3>
+                ELITE
+            </h3>
+
+            <div class="price">
+                ₹2,499
+                <span>/month</span>
+            </div>
+
+            <ul>
+
+                <li>All Pro Features</li>
+                <li>Personal Trainer</li>
+                <li>Custom Workout Plan</li>
+                <li>Priority Support</li>
+
+            </ul>
+
+            <a href="#contact" class="btn btn-outline">
+                Join Now
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ===== TRAINERS ===== -->
+
+<section class="services" id="trainers">
+
+    <div class="section-title">
+
+        <small>OUR TEAM</small>
+
+        <h2>
+            Expert Trainers
+        </h2>
+
+    </div>
+
+
+    <div class="trainer-box">
+
+
+        <div class="trainer">
+
+            <div class="trainer-photo">
+                👨‍🏫
+            </div>
+
+            <h3>
+                Alex Morgan
+            </h3>
+
+            <p>
+                Strength & Conditioning Coach
+            </p>
+
+        </div>
+
+
+
+        <div class="trainer">
+
+            <div class="trainer-photo">
+                🏋️
+            </div>
+
+            <h3>
+                Ryan Smith
+            </h3>
+
+            <p>
+                Personal Fitness Trainer
+            </p>
+
+        </div>
+
+
+
+        <div class="trainer">
+
+            <div class="trainer-photo">
+                💪
+            </div>
+
+            <h3>
+                David Wilson
+            </h3>
+
+            <p>
+                Muscle Building Specialist
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ===== CTA ===== -->
+
+<section class="cta">
+
+    <h2>
+        Ready To Get Stronger?
+    </h2>
+
+    <p>
+        Your fitness journey starts with one decision.
+    </p>
+
+    <a href="#contact" class="btn white-btn">
+        Start Your Journey
+    </a>
+
+</section>
+
+
+
+<!-- ===== CONTACT ===== -->
+
+<section id="contact">
+
+    <div class="section-title">
+
+        <small>GET IN TOUCH</small>
+
+        <h2>
+            Start Your Fitness Journey
+        </h2>
+
+    </div>
+
+
+    <div class="contact">
+
+
+        <div class="contact-box">
+
+            <h3>
+                Contact Information
+            </h3>
+
+            <div class="contact-item">
+                📍 <strong>Address</strong><br>
+                Main Road, Gorakhpur, Uttar Pradesh
+            </div>
+
+            <div class="contact-item">
+                📞 <strong>Phone</strong><br>
+                +91 90000 00000
+            </div>
+
+            <div class="contact-item">
+                ✉️ <strong>Email</strong><br>
+                hello@ironforgefitness.com
+            </div>
+
+            <div class="contact-item">
+                🕐 <strong>Opening Hours</strong><br>
+                Monday - Sunday: 5:00 AM - 10:00 PM
+            </div>
+
+        </div>
+
+
+
+        <div class="contact-box">
+
+            <h3>
+                Ready To Join?
+            </h3>
+
+            <p style="color:#999;margin-bottom:25px;">
+                Contact us today and take the first step
+                towards a stronger and healthier lifestyle.
+            </p>
+
+            <a
+                href="tel:+919000000000"
+                class="btn btn-primary">
+                📞 Call Now
+            </a>
+
+            <a
+                href="https://wa.me/919000000000"
+                class="btn btn-outline">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer>
+
+    <p>
+        © 2026
+        <span>IronForge Fitness</span>.
+        All Rights Reserved.
+    </p>
+
+    <p style="margin-top:8px;font-size:12px;">
+        Website Demo Designed by Ansh Web Studio
+    </p>
+
+</footer>
+
+
+</body>
+</html>
