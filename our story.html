@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Story ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#09090d;
+    color:#eee9ed;
+    font-family:Inter,Arial,sans-serif;
+    line-height:1.8;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* NAVBAR */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;
+    background:rgba(9,9,13,0.85);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.nav{
+    max-width:1150px;
+    margin:auto;
+    padding:18px 24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-family:"Cormorant Garamond",serif;
+    font-size:30px;
+    font-style:italic;
+}
+
+.logo span{
+    color:#d3a8b7;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+}
+
+nav a{
+    color:#aaa2aa;
+    font-size:13px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:white;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 20px;
+    position:relative;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at center,
+    rgba(150,90,110,0.20),
+    transparent 40%),
+    #09090d;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.small-title{
+    letter-spacing:5px;
+    text-transform:uppercase;
+    font-size:11px;
+    color:#b895a2;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(60px,10vw,110px);
+    font-weight:500;
+    line-height:0.9;
+    margin-bottom:30px;
+}
+
+.hero h1 span{
+    color:#d5a9b8;
+    font-style:italic;
+}
+
+.hero p{
+    color:#aaa3aa;
+    max-width:650px;
+    margin:auto;
+    font-size:15px;
+}
+
+.scroll{
+    margin-top:60px;
+    color:#77717a;
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+.scroll::after{
+    content:"↓";
+    display:block;
+    font-size:25px;
+    margin-top:8px;
+}
+
+/* STORY */
+
+.story{
+    max-width:1100px;
+    margin:auto;
+    padding:100px 25px;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:80px;
+}
+
+.heading h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:55px;
+    font-weight:500;
+}
+
+.heading p{
+    color:#77717a;
+    font-size:14px;
+}
+
+/* TIMELINE */
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:15px;
+    top:0;
+    bottom:0;
+    width:1px;
+    background:linear-gradient(
+        #75505f,
+        #29252a,
+        transparent
+    );
+}
+
+.chapter{
+    position:relative;
+    padding-left:65px;
+    margin-bottom:70px;
+}
+
+.dot{
+    position:absolute;
+    left:7px;
+    top:8px;
+    width:17px;
+    height:17px;
+    border-radius:50%;
+    background:#ad8292;
+    border:4px solid #09090d;
+    box-shadow:0 0 0 1px #6e515d;
+}
+
+.date{
+    color:#b48d9a;
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:8px;
+}
+
+.chapter h3{
+    font-family:"Cormorant Garamond",serif;
+    font-size:35px;
+    font-weight:600;
+    margin-bottom:18px;
+    line-height:1.2;
+}
+
+.chapter p{
+    color:#b7b0b7;
+    font-size:15px;
+    margin-bottom:14px;
+}
+
+.chapter strong{
+    color:#eee9ed;
+}
+
+.quote{
+    margin:25px 0;
+    padding:18px 22px;
+    border-left:2px solid #916777;
+    background:rgba(255,255,255,0.025);
+    color:#d4c3ca;
+    font-family:"Cormorant Garamond",serif;
+    font-size:22px;
+    font-style:italic;
+}
+
+/* FINAL */
+
+.divider{
+    height:1px;
+    background:rgba(255,255,255,0.07);
+    margin:80px 0;
+}
+
+.final{
+    text-align:center;
+    max-width:750px;
+    margin:auto;
+}
+
+.final h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:55px;
+    font-weight:500;
+}
+
+.final p{
+    color:#aaa3aa;
+    margin-top:20px;
+}
+
+.final-box{
+    margin-top:45px;
+    padding:30px;
+    border:1px solid rgba(255,255,255,0.08);
+    background:rgba(255,255,255,0.025);
+    font-family:"Cormorant Garamond",serif;
+    font-size:24px;
+    font-style:italic;
+    color:#d5c2ca;
+}
+
+footer{
+    text-align:center;
+    padding:30px 20px 50px;
+    color:#625d64;
+    font-size:11px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .nav{
+        padding:15px 18px;
+    }
+
+    .logo{
+        font-size:26px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        min-height:90vh;
+    }
+
+    .story{
+        padding:70px 18px;
+    }
+
+    .heading h2{
+        font-size:43px;
+    }
+
+    .timeline::before{
+        left:8px;
+    }
+
+    .chapter{
+        padding-left:38px;
+        margin-bottom:55px;
+    }
+
+    .dot{
+        left:0;
+    }
+
+    .chapter h3{
+        font-size:29px;
+    }
+
+    .chapter p{
+        font-size:14px;
+    }
+
+    .quote{
+        font-size:20px;
+    }
+
+    .final h2{
+        font-size:43px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+<div class="nav">
+
+<a href="#home" class="logo">
+Our Story <span>♡</span>
+</a>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#journey">Our Journey</a>
+<a href="#memories">Memories</a>
+<a href="#forever">Forever?</a>
+</nav>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="small-title">
+A Story Worth Remembering
+</div>
+
+<h1>
+Our <span>Story</span> ♡
+</h1>
+
+<p>
+Some people become a chapter of your life.
+Some become a part of the memories you carry
+for a very long time.
+</p>
+
+<div class="scroll">
+SCROLL TO BEGIN
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STORY -->
+
+<section class="story" id="journey">
+
+<div class="heading">
+
+<h2>Our Journey</h2>
+
+<p>
+June 2023 — 2026
+</p>
+
+</div>
+
+
+<div class="timeline" id="memories">
+
+
+<!-- CHAPTER 1 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+June 2023
+</div>
+
+<h3>
+The First Meeting
+</h3>
+
+<p>
+Hum pehli baar tuition mein mile.
+Woh Class 6 mein thi aur main Class 7 mein.
+</p>
+
+<p>
+Shuru mein sab kuch bilkul normal tha.
+Mujhe uske liye kuch romantic feel nahi hota tha.
+</p>
+
+<p>
+Phir dheere-dheere tuition ke baad friends ke saath
+time spend karna, games khelna aur activities karna hua…
+aur pata hi nahi chala kab mujhe uski taraf attraction hone laga.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 2 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+July 2023
+</div>
+
+<h3>
+The One-Sided Beginning
+</h3>
+
+<p>
+Mere bhai ne mujhe uska Instagram bataya.
+Maine follow kiya, lekin shuru mein usne follow back nahi kiya
+aur na hi reply kiya.
+</p>
+
+<p>
+Mujhe pata tha ki jo main feel karta hoon,
+woh shayad woh feel nahi karti.
+</p>
+
+<p>
+Ek din woh tuition aayi aur bina kuch kahe chali gayi.
+Maine Instagram par message kiya.
+Uska reply tha,
+<strong>“bas aise hi.”</strong>
+</p>
+
+<p>
+2023 ke baaki months mein feelings one-sided hi rahi.
+Tuition mein thodi baat hoti thi aur Instagram par
+kabhi reply milta, kabhi nahi.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 3 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+2024
+</div>
+
+<h3>
+A Feeling That Stayed
+</h3>
+
+<p>
+June 2024 mein maine woh tuition chhod di aur
+doosri tuition join kar li.
+Hamari baat almost band ho gayi.
+</p>
+
+<p>
+Main uski Instagram stories aur posts dekhta tha,
+lekin kabhi confess nahi kiya.
+Dar tha ki jo chhoti si friendship hai,
+woh bhi khatam na ho jaye.
+</p>
+
+<p>
+2024 khatam ho gaya,
+lekin meri feelings nahi.
+Mujhe usmein kuch aisa dikhta tha
+jo mujhe kisi aur mein nahi dikhta tha.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 4 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+17 January 2025
+</div>
+
+<h3>
+Her Birthday
+</h3>
+
+<p>
+Uske birthday par maine Instagram story lagayi
+aur wish kiya.
+Sab kuch normal tha.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 5 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+23 January 2025
+</div>
+
+<h3>
+Yahin Se Sab Kuch Badal Gaya
+</h3>
+
+<p>
+Meri younger sister ka birthday tha.
+Family celebration ke baad raat ko main Instagram
+par reels dekh raha tha aur maine use online dekha.
+</p>
+
+<p>
+Maine message kiya.
+Us raat hum lagbhag 2 ghante baat karte rahe —
+pehli baar itni long conversation hui.
+</p>
+
+<p>
+Uske baad lagbhag 5–6 din har week baat hone lagi.
+Yeh around 20 din chala.
+</p>
+
+<p>
+Phir ek din usne kaha,
+<strong>“main baat nahi karungi, mujhe text mat karna.”</strong>
+</p>
+
+<p>
+Maine reason poocha, lekin reply nahi aaya.
+Maine message karna band kar diya.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 6 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+March 2025
+</div>
+
+<h3>
+The Conversation Returned
+</h3>
+
+<p>
+Lagbhag ek mahine tak baat nahi hui.
+Phir maine ek normal reel bheji.
+Usne reply kiya aur conversation dobara start ho gayi.
+</p>
+
+<p>
+Uske baad hum roz kam se kam 2 ghante baat karne lage.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 7 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+Holi 2025
+</div>
+
+<h3>
+The Day I Met Her Again
+</h3>
+
+<p>
+Holi ki evening main apni mother ke saath unki friend ke ghar gaya tha.
+Main usse normally baat kar raha tha.
+</p>
+
+<p>
+Usne kaha ki use kahin jaana hai aur baad mein baat karegi.
+Phir mujhe pata chala ki woh aur uski mother aur siblings
+bhi usi jagah aaye hue the.
+</p>
+
+<p>
+Woh moment mere liye unforgettable tha.
+</p>
+
+<p>
+Maine use side mein bulaya,
+usse face-to-face colour lagaya
+aur Holi wish ki.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 8 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+March 2025
+</div>
+
+<h3>
+The Answer I Had Waited For
+</h3>
+
+<p>
+Holi ke around ek week baad,
+baat karte hue maine finally usse propose kiya.
+</p>
+
+<p>
+Main bahut dar raha tha.
+Phir bhi maine apni feelings keh di.
+</p>
+
+<p>
+Usne <strong>YES</strong> kaha.
+</p>
+
+<div class="quote">
+20 March 2025 —
+jis din meri one-sided feelings officially
+ek relationship ban gayi.
+</div>
+
+<p>
+Main bahut khush tha.
+Jis person ko main itne time se chahta tha,
+usne bhi mujhe choose kiya.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 9 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+March — June 2025
+</div>
+
+<h3>
+Three Beautiful Months
+</h3>
+
+<p>
+Relationship ke first three months bahut acche rahe.
+Woh mujhe pyaar karti thi aur main usse bahut pyaar karta tha.
+</p>
+
+<p>
+Woh time mere liye genuinely bahut special tha.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 10 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+July 2025
+</div>
+
+<h3>
+When Family Found Out
+</h3>
+
+<p>
+July mein family ko hamare baare mein pata chala.
+Mere ghar par problems hui,
+lekin eventually situation settle ho gayi.
+</p>
+
+<p>
+Uske baad bhi relationship normal raha
+aur hum theek the.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 11 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+October 2025
+</div>
+
+<h3>
+The First Serious Fight
+</h3>
+
+<p>
+Chhath ke time main Jharkhand mein tha
+aur woh yahan thi.
+Hamari pehli serious fight hui.
+</p>
+
+<p>
+Usne kaha ki woh relationship mein nahi rehna chahti.
+Gusse mein maine bhi keh diya,
+<strong>“thik hai, jao jo mann kare.”</strong>
+</p>
+
+<p>
+Baad mein maine use samjhaya aur manane ki koshish ki.
+Eventually things became okay again.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 12 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+1 January 2026
+</div>
+
+<h3>
+A New Year, Another Fight
+</h3>
+
+<p>
+New Year ke din phir fight hui.
+Usne dobara kaha ki woh relationship mein nahi rehna chahti.
+</p>
+
+<p>
+Main emotional ho gaya tha.
+Main nahi chahta tha ki meri wajah se woh sad ho.
+Eventually things became okay again.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 13 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+2026
+</div>
+
+<h3>
+Her Birthday
+</h3>
+
+<p>
+Uske birthday par bhi hamari fight hui.
+Lekin next day sab theek ho gaya.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 14 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+February 2026
+</div>
+
+<h3>
+Another Set of Memories
+</h3>
+
+<p>
+Uske maternal uncle ki wedding thi.
+Shopping, preparations aur wedding ke beech
+relationship normal tha.
+</p>
+
+<p>
+February mein ek personal memory bhi bani
+jo meri life ke important moments mein se ek hai.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 15 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+March — April 2026
+</div>
+
+<h3>
+A Calm Phase
+</h3>
+
+<p>
+March aur April relatively normal aur acche rahe.
+April mein ek small family problem aayi,
+lekin kuch serious nahi hua.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 16 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+May 2026
+</div>
+
+<h3>
+The Longest Silence
+</h3>
+
+<p>
+May mein ek bahut serious fight hui.
+Mujhe laga maine kuch galat nahi kiya tha,
+lekin situation suddenly badal gayi.
+</p>
+
+<p>
+Lagbhag 15 din tak baat nahi hui.
+Mujhe laga shayad sab khatam ho gaya.
+</p>
+
+<p>
+Phir uska message aaya
+aur things became okay again.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 17 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+May — June 2026
+</div>
+
+<h3>
+One More Good Day
+</h3>
+
+<p>
+Reconcile hone ke next day uske school ka
+water-park trip tha.
+</p>
+
+<p>
+School ke baad main use pick karne gaya.
+Uske baad humne thoda city explore kiya
+aur phir woh apne ghar chali gayi.
+</p>
+
+<p>
+June 2026 bahut achha gaya.
+</p>
+
+</div>
+
+
+<!-- CHAPTER 18 -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+July 2026
+</div>
+
+<h3>
+When Everything Changed
+</h3>
+
+<p>
+July ki shuruaat bahut achhi thi.
+Sab kuch normal tha aur mujhe bilkul idea nahi tha
+ki month ka ending itna difficult hoga.
+</p>
+
+<p>
+July ke ending mein meri wajah se uske ghar mein
+hamare baare mein pata chalte-chalte reh gaya.
+</p>
+
+<p>
+Uske baad bahut kuch hua.
+Uske ghar par kya hua,
+mujhe aaj bhi poori tarah nahi pata.
+</p>
+
+<p>
+Lekin mere ghar par situation bahut zyada kharab ho gayi.
+Main sab kuch explain nahi kar sakta.
+</p>
+
+<p>
+Bas itna jaanta hoon ki woh waqt
+mere liye bhi aur uske liye bhi normal nahi tha.
+</p>
+
+<p>
+Mere ghar ki situation itni difficult ho gayi
+ki mujhe <strong>10 din ke liye ghar chhodkar
+Lucknow mein rehna pada.</strong>
+</p>
+
+</div>
+
+
+<!-- FINAL CHAPTER -->
+
+<div class="chapter">
+
+<div class="dot"></div>
+
+<div class="date">
+1 Month & 12 Days Later
+</div>
+
+<h3>
+Ek Mahina Aur Baarah Din Baad
+</h3>
+
+<p>
+Uske baad meri usse kabhi baat nahi hui.
+</p>
+
+<p>
+Aaj is sab ko 1 month aur 12 din ho chuke hain,
+aur main ye website bana raha hoon.
+</p>
+
+<p>
+Itna waqt beetne ke baad bhi mere feelings kam nahi hue.
+Sach kahun toh mujhe aaj bhi usse pehle se bhi zyada pyaar hai.
+</p>
+
+<p>
+Din kisi tarah guzar jaate hain,
+lekin main abhi tak move on nahi kar paaya.
+</p>
+
+<p>
+Woh mujhse bahut pyaar karti thi.
+Meri har chhoti-badi baat ka care karti thi,
+galti hone par samjhati thi.
+Uska care mujhe bahut apna sa lagta tha.
+</p>
+
+<p>
+Aaj bhi jab main aankhein band karta hoon,
+toh purani yaadein yaad aa jaati hain —
+uska tightly hug karna,
+mere baalon ko sehlana,
+aur woh saare chhote moments
+jo mere liye bahut important the.
+</p>
+
+<p>
+Mujhe lagta hai ki jo kuch hua,
+usmein meri bhi zimmedari hai.
+Isi wajah se kabhi-kabhi mann karta hai
+ki bas ek baar usse message karke pooch loon —
+<strong>“Tu kaisi hai? Sab theek chal raha hai na?”</strong>
+</p>
+
+<p>
+Aaj hum Instagram par bhi
+ek-doosre ko follow nahi karte.
+</p>
+
+<p>
+Maine usse manane ke liye bahut kuch kiya hai.
+Kabhi maafi maangi,
+kabhi apni ego side mein rakhi,
+kyunki mere liye woh bahut important thi.
+</p>
+
+<p>
+Aur aaj bhi main uska wait kar raha hoon.
+</p>
+
+<div class="quote">
+Ek baar usne kaha tha ki agar kabhi woh mujhe
+chhodkar chali bhi jaaye,
+toh main uska wait karun —
+kyunki woh wapas aayegi.
+</div>
+
+<p>
+Shayad isi baat ki wajah se
+mere andar aaj bhi ek umeed hai.
+</p>
+
+<p>
+Main nahi jaanta woh kabhi wapas aayegi ya nahi.
+</p>
+
+<p>
+Bas itna jaanta hoon ki jo jagah usne meri life mein
+banayi thi, woh mere liye aaj bhi utni hi important hai.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- END -->
+
+<div class="divider"></div>
+
+<section class="final" id="forever">
+
+<h2>
+Why I Made This
+</h2>
+
+<p>
+Ye website use wapas lane ke liye nahi hai.
+Ye un yaadon ko sambhal kar rakhne ke liye hai
+jo meri life ka ek bahut bada hissa ban chuki hain.
+</p>
+
+<div class="final-box">
+
+“Some stories end without an ending.
+They simply become memories
+we never stop carrying.”
+
+<br><br>
+
+♡
+
+</div>
+
+</section>
+
+</section>
+
+
+<footer>
+Made from memories • 2026
+</footer>
+
+</body>
+</html>
